@@ -1,5 +1,5 @@
 const mongoose= require('mongoose');
-const mongoURI="mongodb://localhost:27017";
+const mongoURI="mongodb://localhost:27017/cloudnotes";
 
 const connectTOMongo= async()=>{
    await mongoose.connect(mongoURI)
