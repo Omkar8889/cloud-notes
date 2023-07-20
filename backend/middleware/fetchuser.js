@@ -8,7 +8,6 @@ const fetchuser = (req, res, next) => {
   }
   try {
     const data = jwt.verify(token, jwtSecreat);
-    console.log("user is -----"+data.user)
     req.user = data.user;
     next();
   } catch (error) {

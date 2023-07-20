@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const fetchuser = require("../middleware/fetchuser");
 
 const jwtSecreat = "myscreatkey"; //---this should be imported from separate config file
-//Route#1-- create user using post request on http://localhost:5000/api/auth/createuser
+//Route 1-- create user using post request on http://localhost:5000/api/auth/createuser  /login not  required
 router.post(
   "/createuser",
   // validate user information
@@ -54,7 +54,7 @@ router.post(
   }
 );
 
-//Route#2-- user login using request on http://localhost:5000/api/auth/login
+//Route 2-- user login using request on http://localhost:5000/api/auth/login  /login not  required
 router.post(
   "/login",
   // validate user information
@@ -94,9 +94,9 @@ router.post(
     }
   }
 );
-// Route#3-- authenticate user login using request on http://localhost:5000/api/auth/getuser
+// Route 3-- authenticate user login using request on http://localhost:5000/api/auth/getuser  /login required
 router.post("/getuser", fetchuser, async (req, res) => {
-  // get logged in user details
+
   try {
     // get user id
     const userId = req.user.id;
