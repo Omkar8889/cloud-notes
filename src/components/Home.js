@@ -1,19 +1,15 @@
 import React,{useContext} from 'react'
 import Note from './Note'
 import NoteContext from '../context/notes/Notecontext'
+import EditNote from './EditNote';
+import Menu from './Menu';
 function Home() {
   const context=useContext(NoteContext);
-  let {notes, updatenotes}=context;
-  return (
-    <div style={{"display":"flex"}}>
-      {notes.map(elem => {
-        return(<div key={elem._id} >
-      <Note  title={elem.title} discription={elem.discription} tag={elem.tag}/>
-      </div>)
-        
-      })}
-     
-    </div>
+  const {notes, edit, updatenotes}=context;
+  return (<div className='d-flex '>
+      <Menu/>
+      <Note notes={notes}/>
+      </div>
   )
 }
 

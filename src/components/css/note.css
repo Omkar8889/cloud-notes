@@ -1,0 +1,50 @@
+.notes{
+    max-width: 950px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.note-item{
+    width:225px;
+    margin: 1px 3px;
+}
+.my-text{
+    height: 150px;
+    overflow: hidden;
+}
+.hide-keys{
+    visibility: hidden;
+}
+.show-keys{
+    animation: 0.5s linear 1 reverse show-buttons;
+}
+.Hoverd-Note{
+    box-shadow: 1px 1px 10px grey ;
+}
+.operation-buttons div{
+    height: 30px;
+    width: 30px;
+    border-radius:15px;
+}
+.operation-buttons div:hover {
+    background-color: rgb(168, 168, 168);
+}
+.operation-buttons div i{
+    margin: auto auto;
+}
+
+@keyframes show-buttons{
+    from{
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+@keyframes hide-buttons{
+    from{
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}

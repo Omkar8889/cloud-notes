@@ -1,0 +1,12 @@
+custom bg to notes 
+make copy of note 
+copy note to  clipbord 
+
+note -bg -add tag -menu 
+auto save after editing note
+
+onclick on Note send that note to edit note as prop;
+display prop note in editable Note formate; (full screen mode)
+save edited Note 
+change same Note in existing Notes array
+close editable note 

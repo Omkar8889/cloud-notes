@@ -2,7 +2,6 @@ import React, {useEffect} from 'react'
 import { Link,useLocation} from "react-router-dom";
 function Navbar() {
   const location=useLocation();
-
   return (
     <div>
      <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -45,4 +44,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Navbar;
