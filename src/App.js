@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <Router>
       <Navbar/>
-      <Alert alert={alert}/>
+      {/* <Alert alert={alert}/> */}
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route exact path='/About' element={<About/>}/>

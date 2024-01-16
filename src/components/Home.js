@@ -1,16 +1,26 @@
-import React,{useContext} from 'react'
+import React,{useContext, useState} from 'react'
 import Note from './Note'
 import NoteContext from '../context/notes/Notecontext'
-import EditNote from './EditNote';
+
 import Menu from './Menu';
+import NewNote from './NewNote';
+import FrontPage from './FrontPage';
+import EditNote from './EditNote';
+
 function Home() {
-  const context=useContext(NoteContext);
-  const {notes, edit, updatenotes}=context;
-  return (<div className='d-flex '>
-      <Menu/>
-      <Note notes={notes}/>
-      </div>
+  const {notes,loggedIn,enableNoteEdit}=useContext(NoteContext);
+  return (
+  <div className={loggedIn?'d-flex':'container'}>
+    {enableNoteEdit && <EditNote/>}
+    {loggedIn?<>
+    <Menu notes={notes}/>
+    <div className='container'>
+    <NewNote/>
+    <Note notes={notes} />
+    </div>
+    </>:<FrontPage/>}
+      
+  </div>
   )
 }
-
 export default Home

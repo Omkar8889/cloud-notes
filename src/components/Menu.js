@@ -1,9 +1,11 @@
 import React from 'react'
 import './css/menu.css'
+import Tags from './Tags'
 function Menu() {
+  
   return (
     <div className='menu'>
-      <p>this will have menu for note selection</p>
+      <Tags />
     </div>
   )
 }

@@ -1,0 +1,22 @@
+.MiniMenu{
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    background: white;
+    box-shadow: 0px 0px 1px 1px gray;
+    display: none;
+    & ul{
+        list-style: none;
+        
+    }
+    & ul li:hover{
+        background: #dbdbdb;
+        border-radius: 5px;
+    }
+}
+.display-block{
+    display: block;
+}
+ol, ul {
+    padding-left: 0rem;
+}

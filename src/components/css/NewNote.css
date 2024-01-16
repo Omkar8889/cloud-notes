@@ -1,0 +1,33 @@
+.inputNote{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.inputNote form input{
+    visibility: visible;
+    width: 57%;
+}
+.inputNote form textarea{
+    resize: none; 
+    visibility: visible;
+    width: 57%;
+}
+.hide-content{
+    display: none;
+} 
+.new-content{
+    display: block;
+    max-height: 80dvh;
+    & textarea{
+        width: 100%;
+    }
+& input, textarea{
+    max-width: 100%;
+    overflow-wrap:normal;
+    padding-left:10px ;
+    height: 40px;
+    border-style: none;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px grey ;
+}
+}

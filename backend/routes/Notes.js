@@ -42,6 +42,7 @@ router.post(
         user: req.user.id,
         title: req.body.title,
         discription: req.body.discription,
+        background:req.body.background,
         tag: req.body.tag,
       });
       console.log(note)
@@ -57,16 +58,17 @@ router.post(
     
     // Route 3--- update existing note on http://localhost:5000/api/Notes/updaternote/:noteId \-login required
 router.put(
-  "/updaternote/:id",
+  "/updatenote/:id",
   fetchuser,
   async (req, res) => {
-    const {title,discription, tag}=req.body;
+    const {title,discription, tag,background}=req.body;
     // creating body on new note to update existing one
     let newNote = new Notes();
     newNote = {};
     if(title){newNote.title=title}
     if(discription){newNote.discription=discription}
     if(tag){newNote.tag=tag}
+    if(background){newNote.background=background}
     try {
       
       // getting existig note with noteId

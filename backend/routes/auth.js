@@ -13,7 +13,6 @@ router.post(
   // validate user information
   [
     body("email", "enter valid email").isEmail(),
-    body("name", "emter valid name").isLength({ min: 3 }),
     body("password", "enter valid password").isLength({ min: 5 }),
   ],
   async (req, res) => {
@@ -37,7 +36,6 @@ router.post(
       const hash = bcrypt.hashSync(req.body.password, salt);
       // creating new user
       user = await User.create({
-        name: req.body.name,
         email: req.body.email,
         password: hash,
       });

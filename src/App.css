@@ -23,6 +23,31 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.My-Login-Page{
+  border: 1px solid ;
+  display: -webkit-inline-box;
+    margin-top: 15svh;
+  /* position: relative;
+  left: 45dvw;
+  top: 45dvh; */
+  & form{
+    width: min-content;
+    margin: 75px;
+  }
+}
+
+#passwasd-box{
+  position: relative;
+  & p{
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+    z-index: 10;
+  }
+  & p:hover{
+    background:  rgba(128 128 128 0.5);
+  }
+}
 
 .App-link {
   color: #61dafb;

@@ -13,6 +13,10 @@ const NotesScema= new Schema({
     type:String,
     default:"general"
 },
+background:{
+    type:String,
+    default:"white"
+},
     tag:{
     type:String,
    
